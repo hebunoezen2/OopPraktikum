@@ -26,7 +26,7 @@ class FreizeitbadTest
 	@Test
 	void test()
 	{
-		assertTrue(() -> this.freizeitbad.getBeckenlaenge() == 25, "Die Beckenlänge muss 25 betragen!");
+		assertTrue(() -> this.freizeitbad.getBeckenlaenge() == 25, "Die BeckenlÃ¤nge muss 25 betragen!");
 	}
 
 }
