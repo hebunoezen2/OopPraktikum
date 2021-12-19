@@ -7,9 +7,9 @@ import java.util.ArrayList;
 
 import observer.Observable;
 import observer.Observer;
-import writer.ConcreteCsvCreator;
-import writer.Creator;
-import writer.Product;
+import neuesPackage.ConcreteCsvCreator;
+import neuesPackage.Creator;
+import neuesPackage.Product;
 
 public class FreizeitbaederModel implements Observable {
 	
