@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.Vector;
 import Observer.Observable;
 import Observer.Observer;
-import fabrik.ConcreteCreator;
-import fabrik.ConcreteTxtCreator;
-import fabrik.Creator;
-import fabrik.Product;
-import fabrik.TxtCreator;
-import fabrik.TxtProduct;
+import neuesPackage.ConcreteCreator;
+import neuesPackage.ConcreteTxtCreator;
+import neuesPackage.Creator;
+import neuesPackage.Product;
+import neuesPackage.TxtCreator;
+import neuesPackage.TxtProduct;
 
 public class FreizeitbaederModel implements Observable
 {
