@@ -1,6 +1,9 @@
 package gui.guiSportstaetten;
    
-import business.FreizeitbaederModel;
+import java.io.IOException;
+
+import business.businessFreizeitbaeder.FreizeitbaederModel;
+import business.businessSporthallen.SporthallenModel;
 import javafx.event.*;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -14,27 +17,34 @@ public class SportstaettenView {
 	// Hier ergaenzen
 	private SportstaettenControl spControl;
 	private FreizeitbaederModel freizeitbaederModel;
+	private SporthallenModel sporthallenModel;
 	private Stage primaryStage;
     	//---Anfang Attribute der grafischen Oberflaeche---
     	private Pane pane     				       
  		= new  Pane();
     	private Label lblAnzeigeFreizeitbaeder     
- 		= new Label("Anzeige Freizeitbäder");
+ 		= new Label("Anzeige FreizeitbÃ¤der");
     	private TextArea txtAnzeigeFreizeitbaeder  = new TextArea();
     	private Button btnAnzeigeFreizeitbaeder = new Button("Anzeige");
+	private Label lblAnzeigeSporthallen = new Label("Anzeige Sporthallen");
+    	private TextArea txtAnzeigeSporthallen  = new TextArea();
+    	private Button btnAnzeigeSporthallenCsv = new Button("csv-Import Anzeige");
+    	private Button btnAnzeigeSporthallenTxt = new Button("txt-Import Anzeige");
     	//-------Ende Attribute der grafischen Oberflaeche-------
     
-    	public SportstaettenView(/* Hier ergaenzen … */SportstaettenControl spControl, Stage primaryStage, FreizeitbaederModel freizeitbaederModel){
+public SportstaettenView(/* Hier ergaenzen â€¦ */SportstaettenControl spControl, Stage primaryStage, FreizeitbaederModel freizeitbaederModel, SporthallenModel sporthallenModel){
     		Scene scene = new Scene(this.pane, 560, 340);
     		primaryStage.setScene(scene);
-    		primaryStage.setTitle("Anzeige von Sportstätten");
+    		primaryStage.setTitle("Anzeige von SportstÃ¤tten");
     		primaryStage.show();
     		// Hier ergaenzen
     		this.primaryStage = primaryStage;
     		this.spControl = spControl;
     		this.freizeitbaederModel = freizeitbaederModel;
+    		this.sporthallenModel = sporthallenModel;
     		
-		this.initKomponenten();
+		this.initKomponentenFreizeitbaeder();
+		this.initKomponentenSporthallen();
 		this.initListener();
     	}
     	private void initKomponenten(){
@@ -74,7 +84,7 @@ public class SportstaettenView {
    	 {
    		 StringBuffer text = new StringBuffer();
    	
-   		 // Ergaenzen: for each – Schleife ueber ArrayList
+   		 // Ergaenzen: for each â€“ Schleife ueber ArrayList
    	 
    		 freizeitbaederModel.getFreizeitbaeder().forEach(Freizeitbad -> text.append(Freizeitbad.gibFreizeitbadZurueck(' ') + "\n"));
    		 txtAnzeigeFreizeitbaeder.setText(text.toString());
