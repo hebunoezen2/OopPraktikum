@@ -4,7 +4,7 @@ import ownUtil.PlausiException;
 
 public class Sporthalle {
 	
-	// Name der Sporthalle
+		// Name der Sporthalle
 	    	private String name;
 	    	// Groesse der Flaeche
 	    	private int anzahlQuadratmeter;
