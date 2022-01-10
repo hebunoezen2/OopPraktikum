@@ -26,7 +26,7 @@ public class SporthallenModel
 			
 			while(zeileStr != null)
 			{
-				String[] zeile = zeileStr.split(";");
+			String[] zeile = zeileStr.split(";");
 		        ergebnis.add(new Sporthalle(zeile[0], zeile[1], zeile[2]));
 		        zeileStr = ein.readLine();
 			}    
