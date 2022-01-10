@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import business.Freizeitbad;
+import business.businessFreizeitbaeder.Freizeitbad;
 
 public class ConcreteTxtProduct extends TxtProduct
 {
@@ -15,8 +15,8 @@ public class ConcreteTxtProduct extends TxtProduct
 		aus = new PrintWriter(new FileWriter("Freizeitbaeder.txt", true));
 		aus.println("Daten des Freizeitbades");
 		aus.println("Name des Freizeitbades:                  " + freizeitbad.getName());
-		aus.println("÷ffnungszeit des Freizeitbades:          " + freizeitbad.getGeoeffnetVon() + " - " + freizeitbad.getGeoeffnetBis());
-		aus.println("Beckenl‰nge des Freizeitbades:           " + freizeitbad.getBeckenlaenge());
+		aus.println("√ñffnungszeit des Freizeitbades:          " + freizeitbad.getGeoeffnetVon() + " - " + freizeitbad.getGeoeffnetBis());
+		aus.println("Beckenl√§nge des Freizeitbades:           " + freizeitbad.getBeckenlaenge());
 		aus.println("Wassertemperatur des Freizeitbades:      " + freizeitbad.getTemperatur());
 		aus.println();
 	}
